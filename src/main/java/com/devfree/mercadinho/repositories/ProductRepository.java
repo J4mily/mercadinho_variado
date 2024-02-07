@@ -1,11 +1,11 @@
 package com.devfree.mercadinho.repositories;
 
+import com.devfree.mercadinho.entities.Product;
 import com.devfree.mercadinho.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
+public interface ProductRepository extends JpaRepository<Product, Long> {
 
-public interface UserRepository extends JpaRepository<User, Long> {
-
-//    List<User> finUsers();
+    List<Product> findAll();
 }
